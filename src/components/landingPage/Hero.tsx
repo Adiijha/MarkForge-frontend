@@ -1,4 +1,5 @@
 import { FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,9 +14,11 @@ const Hero = () => {
         </p>
 
         {/* Call-to-Action Button */}
+        <Link to="/generate">
         <button className="mt-6 bg-white text-black px-8 py-3 rounded-lg shadow-lg hover:bg-gray-300 transition font-semibold">
           Generate Now
         </button>
+        </Link>
 
         {/* Image Preview with Gradient, Blur, and Shadows */}
         <div className="mt-10 relative w-full max-w-2xl">
