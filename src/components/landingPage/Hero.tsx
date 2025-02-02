@@ -9,10 +9,10 @@ const Hero = () => {
     <>
     {/* Hero Section */}
     <section className="bg-black text-white py-10 md:py-24 flex min-h-screen">
-      <div className="hidden md:inline relative opacity-10 -right-16 -top-28">
-      <img src={github} alt="" className="w-96 h-96" />
+      <div className="container relative mx-auto px-6 flex flex-col items-center text-center mt-8">
+      <div className="absolute md:inline -top-16 md:-top-36 opacity-10">
+      <img src={github} alt="" className="w-5/6 h-5/6 md:w-full md:h-full" />
       </div>
-      <div className="container absolute mx-auto px-6 flex flex-col items-center text-center mt-8">
         {/* Text Content */}
         <h1 className="text-4xl md:text-6xl font-bold bg-transparent leading-tight text-shadow">
   Generate Stunning <span className="text-gray-400">README</span> Files
@@ -23,13 +23,13 @@ const Hero = () => {
 
         {/* Call-to-Action Button */}
         <Link to="/generate">
-        <button className="mt-6 text-md md:text-lg bg-white text-black border-2 px-8 py-3 rounded-3xl shadow-md hover:shadow-md hover:shadow-white hover:bg-black hover:text-white duration-300 transition font-semibold">
+        <button className="mt-6 relative text-md md:text-lg bg-white text-black border-2 px-8 py-3 rounded-3xl shadow-md hover:shadow-md hover:shadow-white hover:bg-black hover:text-white duration-300 transition font-semibold">
           Generate Now
         </button>
         </Link>
 
         {/* Image Preview with Gradient, Blur, and Shadows */}
-        <div className="mt-10 relative w-full max-w-2xl">
+        <div className="mt-10 relative w-full max-w-5xl">
           {/* Div with Gradient, Blur, and Shadows */}
           <div className=" rounded-lg overflow-hidden shadow-2xl">
             <img

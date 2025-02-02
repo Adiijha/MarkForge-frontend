@@ -1,16 +1,11 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw"; // Allows HTML rendering inside Markdown
-import { Eye } from "lucide-react";
 
 const Preview = ({ content }: { content: string }) => {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-800 max-w-4xl mx-auto mt-6">
-      <h2 className="text-white text-lg font-semibold flex items-center gap-2">
-        <Eye className="w-5 h-5 text-gray-400" /> README Preview
-      </h2>
-
-      <div className="bg-gray-800 p-6 mt-4 rounded-lg text-white border border-gray-700 overflow-auto shadow-lg">
+    <div className="p-6 pt-0 rounded-lg shadow-lg max-w-7xl">
+      <div className="p-6 pt-0 rounded-lg text-white overflow-auto shadow-lg">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
@@ -42,11 +37,11 @@ const Preview = ({ content }: { content: string }) => {
               </blockquote>
             ),
             img: ({ src, alt }) => (
-              <div className="my-6 flex justify-center">
+              <div className="flex flex-wrap gap-4 justify-start my-4">
                 <img
                   src={src || ""}
                   alt={alt || ""}
-                  className="max-w-max h-auto rounded-lg shadow-md"
+                  className="rounded-lg shadow-md max-w-[200px] h-auto"
                 />
               </div>
             ),
@@ -81,7 +76,7 @@ const Preview = ({ content }: { content: string }) => {
               </a>
             ),
             div: ({ children }) => (
-              <div className="text-center mt-6">{children}</div>
+              <div className="">{children}</div>
             ),
           }}
         >

@@ -25,9 +25,11 @@ const Header = () => {
         </nav>
 
         {/* Get Started Button (Visible on all screens) */}
+        <Link to="/generate">
         <button className="hidden md:block bg-white text-black px-6 border-2 border-white py-2.5 hover:shadow-md hover:shadow-white rounded-3xl hover:bg-black hover:text-white transition-all duration-300">
           Get Started
         </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
