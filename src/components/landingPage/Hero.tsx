@@ -8,8 +8,8 @@ const Hero = () => {
   return (
     <>
     {/* Hero Section */}
-    <section className="bg-black text-white py-24 flex min-h-screen">
-      <div className="relative opacity-10 -right-16 -top-28">
+    <section className="bg-black text-white py-10 md:py-24 flex min-h-screen">
+      <div className="hidden md:inline relative opacity-10 -right-16 -top-28">
       <img src={github} alt="" className="w-96 h-96" />
       </div>
       <div className="container absolute mx-auto px-6 flex flex-col items-center text-center mt-8">
@@ -17,13 +17,13 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold bg-transparent leading-tight text-shadow">
   Generate Stunning <span className="text-gray-400">README</span> Files
 </h1>
-        <p className="text-xl mt-4 text-gray-300 max-w-2xl drop-shadow-md">
+        <p className="text-md md:text-xl mt-4 text-gray-300 max-w-2xl drop-shadow-md">
           MarkForge makes it easy to create professional, well-structured README files for your projects with just a few clicks.
         </p>
 
         {/* Call-to-Action Button */}
         <Link to="/generate">
-        <button className="mt-6 text-lg bg-white text-black border-2 px-8 py-3 rounded-3xl shadow-md hover:shadow-md hover:shadow-white hover:bg-black hover:text-white duration-300 transition font-semibold">
+        <button className="mt-6 text-md md:text-lg bg-white text-black border-2 px-8 py-3 rounded-3xl shadow-md hover:shadow-md hover:shadow-white hover:bg-black hover:text-white duration-300 transition font-semibold">
           Generate Now
         </button>
         </Link>
@@ -45,7 +45,7 @@ const Hero = () => {
 
           {/* Floating Lucide Icon */}
           <div className="absolute -top-6 right-8 bg-white bg-opacity-10 p-4 rounded-full shadow-lg backdrop-blur-lg">
-            <FileText className="w-12 h-12 text-gray-400" />
+            <FileText className="w-8 h-8 md:w-12 md:h-12 text-gray-400" />
           </div>
         </div>
       </div>
