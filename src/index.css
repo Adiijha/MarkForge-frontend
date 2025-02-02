@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-shadow {
+    text-shadow: 0 0 5px rgba(59, 153, 231, 0.8); /* Adjust the color and intensity as needed */
+    filter: drop-shadow(0 0 5px rgba(84, 162, 225, 0.8)); /* Apply a drop shadow for compatibility */
+  }
+  

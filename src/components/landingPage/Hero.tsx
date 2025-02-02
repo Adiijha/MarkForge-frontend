@@ -1,21 +1,29 @@
 import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import HowItWorks from "./HowItWorks";
+import dummy from "../../assets/dummy.png";
+import github from "../../assets/github.png";
 
 const Hero = () => {
   return (
-    <section className="bg-black text-white py-24 flex items-center justify-center">
-      <div className="container mx-auto px-6 flex flex-col items-center text-center">
+    <>
+    {/* Hero Section */}
+    <section className="bg-black text-white py-24 flex min-h-screen">
+      <div className="relative opacity-10 -right-16 -top-28">
+      <img src={github} alt="" className="w-96 h-96" />
+      </div>
+      <div className="container absolute mx-auto px-6 flex flex-col items-center text-center mt-8">
         {/* Text Content */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
-          Generate Stunning <span className="text-gray-400">README</span> Files
-        </h1>
-        <p className="text-lg mt-4 text-gray-400 max-w-xl drop-shadow-md">
+        <h1 className="text-4xl md:text-6xl font-bold bg-transparent leading-tight text-shadow">
+  Generate Stunning <span className="text-gray-400">README</span> Files
+</h1>
+        <p className="text-xl mt-4 text-gray-300 max-w-2xl drop-shadow-md">
           MarkForge makes it easy to create professional, well-structured README files for your projects with just a few clicks.
         </p>
 
         {/* Call-to-Action Button */}
         <Link to="/generate">
-        <button className="mt-6 bg-white text-black px-8 py-3 rounded-lg shadow-lg hover:bg-gray-300 transition font-semibold">
+        <button className="mt-6 text-lg bg-white text-black border-2 px-8 py-3 rounded-3xl shadow-md hover:shadow-md hover:shadow-white hover:bg-black hover:text-white duration-300 transition font-semibold">
           Generate Now
         </button>
         </Link>
@@ -23,16 +31,16 @@ const Hero = () => {
         {/* Image Preview with Gradient, Blur, and Shadows */}
         <div className="mt-10 relative w-full max-w-2xl">
           {/* Div with Gradient, Blur, and Shadows */}
-          <div className="relative rounded-lg overflow-hidden shadow-2xl">
+          <div className=" rounded-lg overflow-hidden shadow-2xl">
             <img
-              src="https://via.placeholder.com/800x450" // Placeholder image
+              src={dummy}
               alt="README Preview"
               className="w-full object-cover"
             />
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            <div className=" inset-0 "></div>
             {/* Blur and Glassmorphism Effect */}
-            <div className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-lg"></div>
+            <div className=" inset-0 bg-black "></div>
           </div>
 
           {/* Floating Lucide Icon */}
@@ -42,6 +50,10 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    
+    {/* How It Works Section */} 
+    <HowItWorks />
+    </>
   );
 };
 
