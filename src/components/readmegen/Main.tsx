@@ -64,7 +64,7 @@ const Main = () => {
           className="flex items-center md:text-md text-sm gap-2 px-4 py-2 md:px-6 md:py-3 rounded-lg border shadow-md bg-black hover:bg-white/20 text-white transition-all"
         >
           <Download className="w-5 h-5" />
-          Download
+          <span className="hidden md:inline">Download</span>
         </button>
       </div>
 
